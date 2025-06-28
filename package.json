@@ -7,8 +7,8 @@
     "build:content": "velite --clean",
     "dev:next": "next dev",
     "build:next": "next build",
-    "dev": "run-p dev:*",
-    "build": "run-s build:*",
+    "dev": "next dev && velite --watch",
+    "build": "velite --clean && next build",
     "start": "next start"
   },
   "dependencies": {
