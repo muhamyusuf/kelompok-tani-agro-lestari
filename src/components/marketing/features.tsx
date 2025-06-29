@@ -1,26 +1,27 @@
 import React from "react";
-import { Gem, Repeat2, TentTree } from "lucide-react";
+import { Leaf, Scale3D, SunSnow } from "lucide-react";
 
 const features = [
     {
-        icon: <Gem className="w-6 h-6 text-emerald-600" />,
+        icon: <Leaf className="w-6 h-6 text-emerald-600" />,
         title: "Melon Premium",
         description:
             "Melon unggulan dengan rasa manis maksimal, aroma segar, dan tekstur renyah berkualitas ekspor.",
     },
     {
-        icon: <Repeat2 className="w-6 h-6 text-emerald-600" />,
-        title: "Konsistensi Buah",
+        icon: <Scale3D className="w-6 h-6 text-emerald-600" />,
+        title: "Konsistensi Ukuran",
         description:
-            "Setiap buah dipanen dengan standar ukuran dan kematangan yang seragam untuk menjaga pengalaman terbaik.",
+            "Setiap buah dipanen dengan standar ukuran, bobot, dan kematangan yang seragam untuk menjaga kepercayaan konsumen.",
     },
     {
-        icon: <TentTree className="w-6 h-6 text-emerald-600" />,
-        title: "Teknologi Greenhouse",
+        icon: <SunSnow className="w-6 h-6 text-emerald-600" />,
+        title: "Greenhouse Presisi",
         description:
-            "Ditanam dalam greenhouse tanah & hidroponik untuk mengontrol iklim, hama, dan kualitas tanah secara presisi.",
+            "Pemanfaatan teknologi greenhouse untuk mengontrol suhu, cahaya, kelembapan, dan kualitas tanah secara presisi.",
     },
 ];
+
 
 const FeatureSection: React.FC = () => {
     return (

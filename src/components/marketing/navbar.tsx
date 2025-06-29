@@ -10,6 +10,7 @@ import {
 import { Menu, Sprout } from "lucide-react";
 import ThemeToggler from "@/components/theme/toggler";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Navbar() {
     const navLinks = [
@@ -26,7 +27,13 @@ export function Navbar() {
             <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
                 {/* Logo & Brand */}
                 <Link href="/" className="flex items-center gap-2">
-                    <Sprout className="h-6 w-6 text-green-600" />
+                    <Image
+                        src="/marketing/logo.png"
+                        alt="Melon Agro Lestari Logo"
+                        width={40}
+                        height={40}
+                        className="h-8 w-8 object-contain"
+                    />
                     <span className="text-lg font-semibold text-foreground">
                         Melon Agro Lestari
                     </span>
@@ -64,7 +71,13 @@ export function Navbar() {
                                         href="/"
                                         className="mb-4 flex items-center gap-2 text-lg font-semibold"
                                     >
-                                        <Sprout className="h-6 w-6 text-green-600" />
+                                        <Image
+                                            src="/marketing/logo.png"
+                                            alt="Melon Agro Lestari Logo"
+                                            width={40}
+                                            height={40}
+                                            className="h-8 w-8 object-contain"
+                                        />
                                         Melon Agro Lestari
                                     </Link>
                                 </SheetTitle>

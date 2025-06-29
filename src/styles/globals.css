@@ -22,7 +22,7 @@
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
-  --color-input: var(--input);  
+  --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
@@ -136,7 +136,6 @@
   }
 }
 
-
 ::-moz-selection {
   color: var(--background);
   background: var(--foreground);
@@ -167,10 +166,8 @@
   display: inline-block;
   background: linear-gradient(hsl(var(--secondary-foreground)) 0 0)
     calc(100% - var(--p, 0%)) / 0 var(--p, 0%) no-repeat;
-  transition: 
-    background-size var(--duration) var(--ease),
-    color var(--duration) var(--ease),
-    transform var(--duration) var(--ease);
+  transition: background-size var(--duration) var(--ease),
+    color var(--duration) var(--ease), transform var(--duration) var(--ease);
 }
 
 .mdx-heading:target {
@@ -314,4 +311,21 @@ html.dark[data-theme="light"] {
 
 .steps > h3 {
   @apply mt-8 mb-4 text-base font-semibold;
+}
+
+@layer utilities {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+  }
 }
