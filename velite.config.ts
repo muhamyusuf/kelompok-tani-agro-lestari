@@ -44,6 +44,7 @@ const blogs = defineCollection({
       date: s.isodate(),
       published: s.boolean().default(true),
       author: s.string().optional(),
+      thumbnail: s.string().optional(),
       body: s.mdx(),
       toc: s.object({
         content: s.toc(),

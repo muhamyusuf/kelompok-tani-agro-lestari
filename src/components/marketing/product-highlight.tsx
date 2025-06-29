@@ -2,18 +2,18 @@ import React from "react";
 
 const products = [
     {
-        name: "Melon Super (1 Kg)",
-        description: "Melon super segar, berat 1 kg.",
+        name: "Melon Intanon",
+        description: "Melon varietas unggulan dengan rasa segar dan manis khas.",
         image: "/marketing/hero-image.png"
     },
     {
-        name: "Paket Hemat 3 Kg",
-        description: "Paket hemat berisi 3 kg melon pilihan.",
+        name: "Golden Melon",
+        description: "Golden Melon premium berwarna kuning keemasan dengan daging tebal.",
         image: "/marketing/hero-image.png"
     },
     {
-        name: "Paket Eksklusif 5 Kg",
-        description: "Paket eksklusif berisi 5 kg melon premium.",
+        name: "Sweet Melon",
+        description: "Melon manis alami cocok untuk semua kalangan dan cuaca tropis.",
         image: "/marketing/hero-image.png"
     }
 ];

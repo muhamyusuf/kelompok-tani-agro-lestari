@@ -1,44 +1,31 @@
 'use client';
 
-import React, { useState } from "react";
-import { X } from "lucide-react";
+import { useState } from "react";
+import { blogs } from "#site/content";
 import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+import Link from "next/link";
 
-const blogPosts = [
-    {
-        title: "Manfaat Buah Melon untuk Kesehatan",
-        excerpt: "Melon mengandung vitamin A dan C yang baik untuk kulit dan sistem imun.",
-        image: "https://picsum.photos/600",
-        link: "/blog/manfaat-melon"
-    },
-    {
-        title: "Cara Menyimpan Melon agar Tetap Segar",
-        excerpt: "Tips menyimpan melon agar tahan lebih lama dan tetap juicy.",
-        image: "https://picsum.photos/600",
-        link: "/blog/menyimpan-melon"
-    },
-    {
-        title: "Melon Agro Lestari: Dari Kebun ke Meja",
-        excerpt: "Cerita perjalanan melon premium dari Lampung Timur ke rumah Anda.",
-        image: "https://picsum.photos/600",
-        link: "/blog/perjalanan-melon"
-    }
-];
-
-const BlogSection: React.FC = () => {
+const BlogSection = () => {
     const [zoomIndex, setZoomIndex] = useState<number | null>(null);
+
+    // Ambil 3 blog terakhir yang sudah dipublikasikan
+    const recentBlogs = blogs
+        .filter((blog) => blog.published)
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+        .slice(0, 3); // ambil 3 terbaru
 
     return (
         <section id="blog" className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-10">
-                    Artikel & Blog
+                    Artikel & Blog Terbaru
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                    {blogPosts.map((post, idx) => (
+                    {recentBlogs.map((post, idx) => (
                         <div
-                            key={idx}
-                            onClick={() => (window.location.href = post.link)}
+                            key={post.slug}
+                            onClick={() => (window.location.href = `/${post.slug}`)}
                             className="text-left border border-[#2E6B54]/30 dark:border-[#2E6B54] p-4 rounded-xl bg-white dark:bg-[#17362B] flex flex-col justify-between cursor-pointer group"
                         >
                             <div
@@ -49,9 +36,9 @@ const BlogSection: React.FC = () => {
                                 }}
                             >
                                 <img
-                                    src={post.image}
+                                    src={post.thumbnail || "https://picsum.photos/600"}
                                     alt={post.title}
-                                    className="w-full h-auto object-cover hover:scale-105 transition-transform"
+                                    className="w-full h-72 object-cover hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
                             <div>
@@ -59,14 +46,14 @@ const BlogSection: React.FC = () => {
                                     {post.title}
                                 </h3>
                                 <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                                    {post.excerpt}
+                                    {post.description || "Baca selengkapnya tentang melon premium kami."}
                                 </p>
                                 <Button
                                     asChild
                                     className="bg-[#009963] hover:bg-[#009963]/90 text-white text-sm rounded-full px-4 py-2"
                                     onClick={(e) => e.stopPropagation()}
                                 >
-                                    <a href={post.link}>Baca Selengkapnya</a>
+                                    <Link href={`/${post.slug}`}>Baca Selengkapnya</Link>
                                 </Button>
                             </div>
                         </div>
@@ -83,8 +70,10 @@ const BlogSection: React.FC = () => {
                             <X className="w-6 h-6" />
                         </button>
                         <img
-                            src={blogPosts[zoomIndex].image}
-                            alt={blogPosts[zoomIndex].title}
+                            src={
+                                recentBlogs[zoomIndex].thumbnail || "https://picsum.photos/600"
+                            }
+                            alt={recentBlogs[zoomIndex].title}
                             className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-xl"
                         />
                     </div>

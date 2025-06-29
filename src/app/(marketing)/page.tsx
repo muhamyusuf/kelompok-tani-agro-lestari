@@ -21,10 +21,10 @@ export default function Home() {
       <FeatureSection />
       <AboutSection />
       <ProductHighlight />
-      <OrderStepsSection />
       <GallerySection />
       <TestimonialSection />
       <BlogSection />
+      <OrderStepsSection />
       <CTASection />
       <ContactSection />
     </main>

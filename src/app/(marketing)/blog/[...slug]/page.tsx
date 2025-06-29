@@ -79,7 +79,7 @@ export default async function BlogPostPage({
     const tocContent = Array.isArray(blog.toc) ? blog.toc : [];
 
     return (
-        <main className="relative p-2 md:p-4 lg:py-6 lg:px-8 lg:gap-10 xl:grid xl:grid-cols-[1fr_250px]">
+        <main className="relative w-full px-4 md:px-6 lg:px-8 max-w-6xl mx-auto py-8 lg:py-10 flex flex-col xl:flex-row gap-10">
             <div className="w-full mx-auto min-w-0">
                 {/* Breadcrumb */}
                 <Breadcrumb className="mb-4">
@@ -125,11 +125,33 @@ export default async function BlogPostPage({
                     </p>
                 </div>
 
+                {/* Thumbnail */}
+                {blog.thumbnail && (
+                    <div className="mb-8 overflow-hidden rounded-md">
+                        <img
+                            src={blog.thumbnail}
+                            alt={blog.title}
+                            className="w-full max-h-[500px] object-cover"
+                        />
+                    </div>
+                )}
+
                 {/* Konten */}
                 <div className="prose dark:prose-invert max-w-none pb-12">
                     <MDXContentRenderer code={blog.body} />
                 </div>
+
+                {/* Tombol kembali */}
+                <div className="flex justify-center w-full xl:w-auto">
+                    <a
+                        href="/blog"
+                        className="inline-flex items-center px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 transition-colors"
+                    >
+                        Kembali ke Blog
+                    </a>
+                </div>
             </div>
+
 
             {/* TOC */}
             {tocContent.length > 0 && (

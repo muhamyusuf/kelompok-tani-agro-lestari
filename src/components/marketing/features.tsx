@@ -1,21 +1,24 @@
 import React from "react";
-import { LeafIcon, TruckIcon, BadgeCheckIcon } from "lucide-react";
+import { Gem, Repeat2, TentTree } from "lucide-react";
 
 const features = [
     {
-        icon: <LeafIcon className="w-6 h-6 text-emerald-600" />,
-        title: "Pertanian Organik",
-        description: "Melon kami ditanam dengan metode organik, tanpa pestisida.",
+        icon: <Gem className="w-6 h-6 text-emerald-600" />,
+        title: "Melon Premium",
+        description:
+            "Melon unggulan dengan rasa manis maksimal, aroma segar, dan tekstur renyah berkualitas ekspor.",
     },
     {
-        icon: <TruckIcon className="w-6 h-6 text-emerald-600" />,
-        title: "Pengiriman Cepat",
-        description: "Pengiriman cepat dan aman ke seluruh Lampung Timur.",
+        icon: <Repeat2 className="w-6 h-6 text-emerald-600" />,
+        title: "Konsistensi Buah",
+        description:
+            "Setiap buah dipanen dengan standar ukuran dan kematangan yang seragam untuk menjaga pengalaman terbaik.",
     },
     {
-        icon: <BadgeCheckIcon className="w-6 h-6 text-emerald-600" />,
-        title: "Kualitas Premium",
-        description: "Setiap buah dipilih dengan cermat untuk kualitas terbaik.",
+        icon: <TentTree className="w-6 h-6 text-emerald-600" />,
+        title: "Teknologi Greenhouse",
+        description:
+            "Ditanam dalam greenhouse tanah & hidroponik untuk mengontrol iklim, hama, dan kualitas tanah secara presisi.",
     },
 ];
 
@@ -24,10 +27,10 @@ const FeatureSection: React.FC = () => {
         <section id="keunggulan" className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                    Keunggulan Kami
+                    Kenapa Memilih Kami?
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 mb-10 max-w-2xl">
-                    Kami menjamin kualitas terbaik untuk setiap melon yang kami hasilkan.
+                    Kami menerapkan sistem pertanian modern untuk menghasilkan melon premium terbaik secara konsisten.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -40,7 +43,7 @@ const FeatureSection: React.FC = () => {
                             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                                 {feature.title}
                             </h3>
-                            <p className="text-sm text-emerald-600 dark:text-emerald-300">
+                            <p className="text-sm text-emerald-600 dark:text-emerald-300 leading-relaxed">
                                 {feature.description}
                             </p>
                         </div>

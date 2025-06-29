@@ -13,7 +13,7 @@ const ContactSection: React.FC = () => {
             </div>
 
             <div className="w-full max-w-xl mx-auto relative z-10">
-                <Card className="bg-white dark:bg-[#17362B] rounded-sm shadow-[#009963]/10 shadow-sm">
+                <Card className="bg-white/50 dark:bg-[#17362B] rounded-sm shadow-[#009963]/10 shadow-sm">
                     <CardHeader>
                         <CardTitle className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                             Hubungi Kami
