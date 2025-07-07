@@ -1,5 +1,6 @@
 import React from "react";
 import { Leaf, Scale3D, SunSnow } from "lucide-react";
+import Image from "next/image";
 
 const features = [
     {
@@ -40,11 +41,19 @@ const FeatureSection: React.FC = () => {
                             key={idx}
                             className="border border-[#2E6B54]/30 dark:border-[#2E6B54] p-6 rounded-xl bg-white dark:bg-[#17362B] shadow-sm text-left"
                         >
+                            <Image
+                                src={`/marketing/feature-${idx + 1}.png`}
+                                alt={feature.title}
+                                width={1080}
+                                height={1080}
+                                className="mb-4 w-full h-64 rounded-sm object-cover"
+                            />
+
                             <div className="mb-4">{feature.icon}</div>
                             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                                 {feature.title}
                             </h3>
-                            <p className="text-sm text-emerald-600 dark:text-emerald-300 leading-relaxed">
+                            <p className="text-sm text-emerald-600 dark:text-emerald-300 leading">
                                 {feature.description}
                             </p>
                         </div>

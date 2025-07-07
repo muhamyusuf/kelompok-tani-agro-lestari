@@ -2,19 +2,19 @@ import React from "react";
 
 const testimonials = [
     {
-        name: "Dian, Tangerang",
+        name: "Tim ITERAHERO",
         message: "Melonnya luar biasa enak! Packing-nya juga rapi banget.",
-        image: "https://picsum.photos/200/300"
+        image: "/marketing/testimonial-1.png"
     },
     {
-        name: "Pak Budi, Bekasi",
-        message: "Langganan tiap minggu. Anak-anak suka banget!",
-        image: "https://picsum.photos/200/300"
+        name: "Pak Linuk, Lampung Timur",
+        message: "Langganan tiap panen. Melonnya besar, segar, dan manis!",
+        image: "/marketing/testimonial-2.png"
     },
     {
         name: "Yuni, Jogja",
         message: "Puas banget beli langsung dari petani. Dukungan untuk lokal!",
-        image: "https://picsum.photos/200/300"
+        image: "/marketing/testimonial-2.png"
     }
 ];
 
@@ -32,7 +32,7 @@ const TestimonialSection: React.FC = () => {
                                 <img
                                     src={item.image}
                                     alt={item.name}
-                                    className="w-full h-auto object-cover"
+                                    className="w-full h-64 object-cover"
                                 />
                             </div>
                             <h3 className="font-semibold text-gray-900 dark:text-white mb-1">

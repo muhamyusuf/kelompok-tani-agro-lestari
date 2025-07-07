@@ -329,3 +329,7 @@ html.dark[data-theme="light"] {
     animation: fadeInUp 1s ease-out forwards;
   }
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}

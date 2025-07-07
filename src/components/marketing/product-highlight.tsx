@@ -1,20 +1,21 @@
+import Image from "next/image";
 import React from "react";
 
 const products = [
     {
         name: "Melon Intanon",
         description: "Melon varietas unggulan dengan rasa segar dan manis khas.",
-        image: "/marketing/hero-image.png"
+        image: "/marketing/intanon-melon.png"
     },
     {
         name: "Golden Melon",
         description: "Golden Melon premium berwarna kuning keemasan dengan daging tebal.",
-        image: "/marketing/hero-image.png"
+        image: "/marketing/golden-melon.png"
     },
     {
         name: "Sweet Melon",
         description: "Melon manis alami cocok untuk semua kalangan dan cuaca tropis.",
-        image: "/marketing/hero-image.png"
+        image: "/marketing/sweet-melon.png"
     }
 ];
 
@@ -29,10 +30,12 @@ const ProductHighlight: React.FC = () => {
                     {products.map((product, idx) => (
                         <div key={idx} className="text-left">
                             <div className="overflow-hidden rounded-xl shadow-md mb-4">
-                                <img
+                                <Image
                                     src={product.image}
                                     alt={product.name}
-                                    className="w-full h-auto object-cover"
+                                    width={1080}
+                                    height={1080}
+                                    className="w-full h-80 object-cover"
                                 />
                             </div>
                             <h3 className="font-semibold text-gray-900 dark:text-white mb-1">

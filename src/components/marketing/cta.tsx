@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CTASection: React.FC = () => {
     return (
@@ -15,11 +16,13 @@ const CTASection: React.FC = () => {
                 <p className="text-gray-700 dark:text-gray-300 mb-8">
                     Dapatkan melon langsung dari kebun Kelompok Tani Agro Lestari. Segar, alami, dan penuh nutrisi — pesan sekarang untuk pengalaman rasa terbaik!
                 </p>
-                <Button
-                    className="bg-[#009963] hover:bg-[#009963]/90 px-6 py-3 text-white text-sm rounded-full"
-                >
-                    Pesan Sekarang
-                </Button>
+                <Link href={'/#kontak'}>
+                    <Button
+                        className="bg-[#009963] hover:bg-[#009963]/90 px-6 py-3 text-white text-sm rounded-full"
+                    >
+                        Pesan Sekarang
+                    </Button>
+                </Link>
             </div>
         </section>
     );
