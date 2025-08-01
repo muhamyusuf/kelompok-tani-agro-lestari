@@ -333,3 +333,8 @@ html.dark[data-theme="light"] {
 ::-webkit-scrollbar {
   width: 0;
 }
+
+
+*{
+  scroll-behavior: smooth;
+}
