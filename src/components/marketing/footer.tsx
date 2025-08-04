@@ -1,4 +1,4 @@
-import { MessageCircleMore } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
     const footerLinks = [
@@ -26,21 +26,33 @@ export function Footer() {
                     ))}
                 </div>
 
+                {/* Lokasi */}
+                <div className="mt-6 text-center text-sm text-emerald-800 dark:text-[#8FCCB8]/90 px-4 max-w-2xl mx-auto leading-relaxed">
+                    Desa Labuhan Ratu VII, Kecamatan Labuhan Ratu, Kabupaten Lampung Timur,<br className="hidden sm:block" />
+                    Provinsi Lampung, Indonesia.
+                </div>
+
                 {/* WhatsApp */}
                 <div className="mt-10 flex justify-center">
                     <a
                         href="https://wa.me/6281234567890"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-emerald-600 dark:text-[#8FCCB8] transition hover:text-emerald-800 dark:hover:text-[#8FCCB8]/90"
+                        className="flex items-center gap-2 text-emerald-600 dark:text-[#8FCCB8] transition hover:text-emerald-800 dark:hover:text-[#8FCCB8]/90 flex-col"
                     >
-                        <MessageCircleMore className="h-6 w-6" />
+                        <Image
+                            src='/marketing/whatsapp-icon.png'
+                            alt="whatsapp-icon"
+                            width={100}
+                            height={100}
+                            className="w-6 h-6"
+                        />
                         <span>Hubungi via WhatsApp</span>
                     </a>
                 </div>
 
                 {/* Copyright */}
-                <p className="mt-10 text-center text-sm text-emerald-700 dark:text-[#8FCCB8]/90">
+                <p className="mt-6 text-center text-sm text-emerald-700 dark:text-[#8FCCB8]/90">
                     © {new Date().getFullYear()} Melon Premium Agro Lestari. All rights reserved.
                 </p>
             </div>

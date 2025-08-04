@@ -29,7 +29,7 @@ export default function BlogListPage() {
     const rest = sortedBlogs.slice(6);
 
     return (
-        <div className="max-w-6xl mx-auto py-12 px-4 space-y-16">
+        <div className="max-w-6xl mx-auto pt-32 pb-12 px-4 space-y-16">
             <div className="text-center">
                 <h1 className="text-4xl font-bold tracking-tight font-heading">
                     Wawasan Seputar Melon Premium
@@ -85,7 +85,7 @@ export default function BlogListPage() {
                                         <Link href={`/${blog.slug}`}>{blog.title}</Link>
                                     </CardTitle>
                                     {blog.description && (
-                                        <CardDescription className="mt-2 text-sm">
+                                        <CardDescription className="mt-2 text-sm line-clamp-2">
                                             {blog.description}
                                         </CardDescription>
                                     )}
@@ -143,7 +143,9 @@ export default function BlogListPage() {
                                         </CardTitle>
                                         {blog.description && (
                                             <CardDescription className="mt-2 text-sm">
-                                                {blog.description}
+                                                <p className="line-clamp-2">
+                                                    {blog.description}
+                                                </p>
                                             </CardDescription>
                                         )}
                                     </CardHeader>
