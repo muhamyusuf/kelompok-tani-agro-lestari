@@ -51,7 +51,7 @@ const ContactSection: React.FC = () => {
             return;
         }
 
-        const phone = "6285187060932";
+        const phone = "6281369674457";
         const defaultText = `Halo, saya ${name} ingin menghubungi Agro Lestari.\n\nPesan:\n${message}`;
         const encodedText = encodeURIComponent(defaultText);
         const whatsappLink = `https://wa.me/${phone}?text=${encodedText}`;

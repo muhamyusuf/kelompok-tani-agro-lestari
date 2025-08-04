@@ -1,4 +1,4 @@
-import { MessageCircleMore } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
     const footerLinks = [
@@ -32,9 +32,15 @@ export function Footer() {
                         href="https://wa.me/6281234567890"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-emerald-600 dark:text-[#8FCCB8] transition hover:text-emerald-800 dark:hover:text-[#8FCCB8]/90"
+                        className="flex items-center gap-2 text-emerald-600 dark:text-[#8FCCB8] transition hover:text-emerald-800 dark:hover:text-[#8FCCB8]/90 flex-col"
                     >
-                        <MessageCircleMore className="h-6 w-6" />
+                        <Image
+                            src='/marketing/whatsapp-icon.png'
+                            alt="whatsapp-icon"
+                            width={100}
+                            height={100}
+                            className="w-6 h-6"
+                        />
                         <span>Hubungi via WhatsApp</span>
                     </a>
                 </div>

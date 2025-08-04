@@ -14,6 +14,7 @@ import ContactSection from "@/components/marketing/contact-section";
 import CTASection from "@/components/marketing/cta";
 import OrderStepsSection from "@/components/marketing/order-step-section";
 import TechGridSection from "@/components/marketing/tech-grid-section";
+import AgricultureActivitiesSection from "@/components/marketing/agriculture-activities-section";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <FeatureSection />
       <AboutSection />
       <ProductHighlight />
+      <AgricultureActivitiesSection />
       <TechGridSection />
       <GallerySection />
       <TestimonialSection />
