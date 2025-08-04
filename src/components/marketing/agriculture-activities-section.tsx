@@ -51,29 +51,38 @@ const activities = [
 
 const AgricultureActivitiesSection: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
+    const handleChangeSlide = (nextIndex: number) => {
+        if (nextIndex === currentIndex) return;
+        setIsTransitioning(true);
+        setTimeout(() => {
+            setCurrentIndex(nextIndex);
+            setIsTransitioning(false);
+        }, 300);
+    };
 
     const prevSlide = () =>
-        setCurrentIndex((prev) => (prev === 0 ? activities.length - 1 : prev - 1));
+        handleChangeSlide(currentIndex === 0 ? activities.length - 1 : currentIndex - 1);
     const nextSlide = () =>
-        setCurrentIndex((prev) => (prev === activities.length - 1 ? 0 : prev + 1));
+        handleChangeSlide(currentIndex === activities.length - 1 ? 0 : currentIndex + 1);
 
     return (
         <section className="w-full bg-emerald-900 text-white rounded-sm py-14 md:py-16 relative overflow-hidden">
             <div className="max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
-                {/* Top Header */}
+                {/* Header */}
                 <div className="w-full flex flex-col md:flex-row items-center justify-between mb-6 text-sm text-green-300">
                     <p className="mb-2 md:mb-0">
                         [{String(currentIndex + 1).padStart(2, "0")}/
                         {String(activities.length).padStart(2, "0")}]
                     </p>
 
-                    {/* Timeline */}
                     <div className="flex items-center justify-center flex-wrap gap-3">
                         {activities.map((act, idx) => (
                             <button
                                 key={idx}
-                                onClick={() => setCurrentIndex(idx)}
-                                className={`text-xs sm:text-sm px-3 py-1 rounded-md transition-all ${idx === currentIndex
+                                onClick={() => handleChangeSlide(idx)}
+                                className={`text-xs sm:text-sm px-3 py-1 rounded-sm transition-all ${idx === currentIndex
                                     ? "bg-white text-green-800 font-semibold"
                                     : "text-green-300 hover:text-white"
                                     }`}
@@ -89,20 +98,22 @@ const AgricultureActivitiesSection: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Image Box */}
+                {/* Image box with transition */}
                 <div className="relative w-full max-w-4xl my-6">
                     <div className="w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[450px] flex items-center justify-center bg-emerald-800 rounded-xl overflow-hidden">
                         <Image
+                            key={activities[currentIndex].image}
                             src={activities[currentIndex].image}
                             alt={activities[currentIndex].title}
                             width={800}
                             height={450}
-                            className="w-full h-full object-cover rounded-xl shadow-lg"
+                            className={`w-full h-full object-cover rounded-xl shadow-lg transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"
+                                }`}
                         />
                     </div>
                 </div>
 
-                {/* Navigation Bottom Right */}
+                {/* Navigation */}
                 <div className="absolute bottom-3 right-3 flex gap-3">
                     <button
                         onClick={prevSlide}
@@ -118,8 +129,8 @@ const AgricultureActivitiesSection: React.FC = () => {
                     </button>
                 </div>
 
-                {/* Description Bottom Left */}
-                <p className="mt-6 max-w-3xl text-green-100 text-sm sm:text-base leading-relaxed">
+                {/* Description */}
+                <p className="mt-6 max-w-3xl text-green-100 bg-none text-sm sm:text-base leading-relaxed">
                     {activities[currentIndex].description}
                 </p>
             </div>

@@ -79,7 +79,7 @@ export default async function BlogPostPage({
     const tocContent = Array.isArray(blog.toc) ? blog.toc : [];
 
     return (
-        <main className="relative w-full px-4 md:px-6 lg:px-8 max-w-6xl mx-auto py-8 lg:py-10 flex flex-col xl:flex-row gap-10">
+        <main className="relative w-full px-4 md:px-6 lg:px-8 max-w-6xl mx-auto py-8 lg:py-32 flex flex-col xl:flex-row gap-10">
             <div className="w-full mx-auto min-w-0">
                 {/* Breadcrumb */}
                 <Breadcrumb className="mb-4">

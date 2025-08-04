@@ -26,6 +26,12 @@ export function Footer() {
                     ))}
                 </div>
 
+                {/* Lokasi */}
+                <div className="mt-6 text-center text-sm text-emerald-800 dark:text-[#8FCCB8]/90 px-4 max-w-2xl mx-auto leading-relaxed">
+                    Desa Labuhan Ratu VII, Kecamatan Labuhan Ratu, Kabupaten Lampung Timur,<br className="hidden sm:block" />
+                    Provinsi Lampung, Indonesia.
+                </div>
+
                 {/* WhatsApp */}
                 <div className="mt-10 flex justify-center">
                     <a
@@ -46,7 +52,7 @@ export function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <p className="mt-10 text-center text-sm text-emerald-700 dark:text-[#8FCCB8]/90">
+                <p className="mt-6 text-center text-sm text-emerald-700 dark:text-[#8FCCB8]/90">
                     © {new Date().getFullYear()} Melon Premium Agro Lestari. All rights reserved.
                 </p>
             </div>
