@@ -9,13 +9,13 @@ const activities = [
         title: "Penyemaian",
         description:
             "Benih melon disemai di media khusus dengan kelembaban terjaga dan nutrisi yang cukup, memastikan bibit tumbuh sehat untuk tahap selanjutnya.",
-        image: "https://picsum.photos/id/1011/800/450",
+        image: "activities/penyemaian.mp4",
     },
     {
         title: "Pindah Tanam",
         description:
             "Bibit yang telah kuat dipindahkan ke lahan tanam atau greenhouse dengan tata letak rapi agar pertumbuhan tanaman optimal dan seragam.",
-        image: "https://picsum.photos/id/1021/800/450",
+        image: "activities/pindah_tanam.mp4",
     },
     {
         title: "Maintenance Tanaman",
@@ -27,7 +27,7 @@ const activities = [
         title: "Polinasi",
         description:
             "Proses penyerbukan dilakukan secara alami atau manual untuk meningkatkan kualitas buah, memastikan setiap bunga menghasilkan melon terbaik.",
-        image: "https://picsum.photos/id/1041/800/450",
+        image: "activities/polinasi.mp4",
     },
     {
         title: "Pruning",
@@ -98,18 +98,29 @@ const AgricultureActivitiesSection: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Image box with transition */}
+                {/* Image or Video box with transition */}
                 <div className="relative w-full max-w-4xl my-6">
                     <div className="w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[450px] flex items-center justify-center bg-emerald-800 rounded-xl overflow-hidden">
-                        <Image
-                            key={activities[currentIndex].image}
-                            src={activities[currentIndex].image}
-                            alt={activities[currentIndex].title}
-                            width={800}
-                            height={450}
-                            className={`w-full h-full object-cover rounded-xl shadow-lg transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"
-                                }`}
-                        />
+                        {activities[currentIndex].image.endsWith('.mp4') ? (
+                            <video
+                                key={activities[currentIndex].image}
+                                src={activities[currentIndex].image}
+                              
+                                autoPlay
+                                loop
+                                muted
+                                className={`w-full h-full object-cover rounded-xl shadow-lg transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
+                            />
+                        ) : (
+                            <Image
+                                key={activities[currentIndex].image}
+                                src={activities[currentIndex].image}
+                                alt={activities[currentIndex].title}
+                                width={800}
+                                height={450}
+                                className={`w-full h-full object-cover rounded-xl shadow-lg transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
+                            />
+                        )}
                     </div>
                 </div>
 
