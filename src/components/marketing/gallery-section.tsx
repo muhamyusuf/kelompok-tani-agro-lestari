@@ -7,9 +7,9 @@ const images = [
     "galeri/1.JPG",
     "galeri/2.JPG",
     "galeri/3.JPG",
-    "galeri/4.JPG",
+    "galeri/4.jpg",
     "galeri/5.JPG",
-    "galeri/6.JPG",
+    "galeri/6.jpg",
     "galeri/7.JPG",
     "marketing/testimonial-1.png"
 ];
