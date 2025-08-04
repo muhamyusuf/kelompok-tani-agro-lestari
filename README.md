@@ -78,7 +78,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Creator
 
-Created by [rds_agi](https://rdsx.dev)
+Created by [rds_agi]
+
+(https://rdsx.dev)
 
 ## Links
 
@@ -87,3 +89,4 @@ Created by [rds_agi](https://rdsx.dev)
 
 
 tambah fitur
+update readme lagi
