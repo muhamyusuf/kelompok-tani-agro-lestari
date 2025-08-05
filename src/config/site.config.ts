@@ -28,7 +28,7 @@ export const siteConfig: SiteConfig = {
     "Melon Lampung",
     "Melon Indonesia",
   ],
-  og: "https://www.agrolestarifarm.my.id/og-melon.png",
+  og: "https://www.agrolestarifarm.my.id/marketing/hero-image.png",
   creator: {
     name: "Kelompok Tani Agro Lestari",
     url: "https://www.agrolestarifarm.my.id/about",
