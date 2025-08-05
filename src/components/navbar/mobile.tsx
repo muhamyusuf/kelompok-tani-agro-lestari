@@ -58,7 +58,7 @@ export default function MobileNav() {
           ))}
         </div>
         <Separator className="my-2" />
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <Button size="icon" variant="ghost" className="rounded-full" asChild>
             <a href={siteConfig.socials.github} target="_blank">
               <GithubIcon />
@@ -77,7 +77,7 @@ export default function MobileNav() {
             </a>
           </Button>
           <ThemeToggler />
-        </div>
+        </div> */}
       </SheetContent>
     </Sheet>
   );
