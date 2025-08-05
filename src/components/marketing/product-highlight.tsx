@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Package } from "lucide-react";
 
 const products = [
     {
@@ -19,8 +19,19 @@ const products = [
         name: "Sweet Melon",
         description: "Melon manis alami cocok untuk semua kalangan dan cuaca tropis.",
         image: "/marketing/sweet-melon.png"
+    },
+    {
+        name: "Bibit Melon Premium",
+        description: "Bibit melon unggul untuk budidaya greenhouse maupun lahan terbuka, dengan daya tumbuh tinggi.",
+        image: "/marketing/bibit-melon.png"
+    },
+    {
+        name: "Bibit Cabai Rawit",
+        description: "Bibit cabai rawit pilihan dengan pertumbuhan cepat dan tahan terhadap cuaca tropis ekstrem.",
+        image: "/marketing/bibit-cabai.png"
     }
 ];
+
 
 const ProductHighlight: React.FC = () => {
     const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -61,9 +72,15 @@ const ProductHighlight: React.FC = () => {
     return (
         <section id="produk" className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
+                <p className="text-sm text-emerald-500 font-medium mb-1 flex items-center gap-2">
+                    <Package />
+                    <span>List Produk</span>
+                </p>
+
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-10">
                     Produk Unggulan
                 </h2>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {products.map((product, idx) => (
                         <div key={idx} className="text-left flex flex-col">
@@ -122,7 +139,7 @@ const ProductHighlight: React.FC = () => {
                             alt={products[selectedIndex].name}
                             width={1920}
                             height={1080}
-                            className="max-h-[90vh] max-w-[90vw] object-contain rounded-xl shadow-lg"
+                            className="max-h-[90vh] max-w-full md:max-w-[50vh] object-cover rounded-xl shadow-lg"
                         />
 
                         {/* Tombol Berikutnya */}

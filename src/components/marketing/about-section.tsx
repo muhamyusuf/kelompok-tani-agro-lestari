@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Dialog } from '@headlessui/react';
-import { X } from 'lucide-react';
+import { Info, X } from 'lucide-react';
 
 const contents = [
     {
@@ -53,7 +53,7 @@ const AboutSection: React.FC = () => {
     }, []);
 
     return (
-        <section id="tentang" className="py-16 px-4 bg-white dark:bg-emerald-950">
+        <section id="tentang" className="py-16 px-4">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-10 overflow-hidden">
                 {/* Gambar besar kiri full height dengan zoom effect */}
                 <div className="md:w-1/2 w-full h-auto md:h-auto flex">
@@ -84,13 +84,17 @@ const AboutSection: React.FC = () => {
 
                 {/* Konten kanan */}
                 <div className="md:w-1/2 w-full flex flex-col justify-center">
-                    <p className="text-sm text-emerald-500 font-medium mb-1">Tentang Kami</p>
+                    <p className="text-sm text-emerald-500 font-medium mb-1 flex items-center gap-2">
+                        <Info />
+                        <span>Tentang Kami</span>
+                    </p>
+
                     <motion.h2
                         key={'title-' + index}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="text-2xl sm:text-4xl font-semibold text-gray-900 dark:text-white mb-6 leading-9"
+                        className="text-2xl sm:text-4xl font-semibold text-gray-900 dark:text-white mb-6 leading-9 mt-2"
                     >
                         {contents[index].title}
                         <br />

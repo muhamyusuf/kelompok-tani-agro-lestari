@@ -4,14 +4,14 @@ import React, { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-    "galeri/1.JPG",
-    "galeri/2.JPG",
-    "galeri/3.JPG",
-    "galeri/4.jpg",
-    "galeri/5.JPG",
-    "galeri/6.jpg",
-    "galeri/7.JPG",
-    "marketing/testimonial-1.png"
+    "compressed/1.avif",
+    "compressed/2.avif",
+    "compressed/3.avif",
+    "compressed/4.avif",
+    "compressed/5.avif",
+    "compressed/6.avif",
+    "compressed/7.avif",
+    "compressed/8.avif"
 ];
 
 const GallerySection: React.FC = () => {

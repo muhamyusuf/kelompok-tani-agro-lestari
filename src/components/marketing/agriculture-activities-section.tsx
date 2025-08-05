@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Tractor } from "lucide-react";
 import Image from "next/image";
 
 const activities = [
@@ -70,6 +70,15 @@ const AgricultureActivitiesSection: React.FC = () => {
     return (
         <section className="w-full bg-emerald-900 text-white rounded-sm py-14 md:py-16 relative overflow-hidden">
             <div className="max-w-6xl mx-auto px-4 flex flex-col items-center text-center">
+                <p className="text-sm text-white/80 font-medium mb-1 flex items-center gap-2">
+                    <Tractor />
+                    <span>Macam Kegiatan</span>
+                </p>
+
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10">
+                    Aktivitas Agro Lestari Farm
+                </h2>
+
                 {/* Header */}
                 <div className="w-full flex flex-col md:flex-row items-center justify-between mb-6 text-sm text-green-300">
                     <p className="mb-2 md:mb-0">
@@ -82,9 +91,9 @@ const AgricultureActivitiesSection: React.FC = () => {
                             <button
                                 key={idx}
                                 onClick={() => handleChangeSlide(idx)}
-                                className={`text-xs sm:text-sm px-3 py-1 rounded-sm transition-all ${idx === currentIndex
-                                    ? "bg-white text-green-800 font-semibold"
-                                    : "text-green-300 hover:text-white"
+                                className={`text-xs sm:text-sm px-3 py-1 transition-all border-b-2 ${idx === currentIndex
+                                    ? "border-white text-white font-semibold"
+                                    : "border-transparent text-green-300 hover:text-white"
                                     }`}
                             >
                                 {act.title}
@@ -105,7 +114,7 @@ const AgricultureActivitiesSection: React.FC = () => {
                             <video
                                 key={activities[currentIndex].image}
                                 src={activities[currentIndex].image}
-                              
+
                                 autoPlay
                                 loop
                                 muted

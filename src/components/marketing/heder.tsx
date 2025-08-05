@@ -4,7 +4,7 @@ const HeaderHero: React.FC = () => {
     return (
         <section
             id="beranda"
-            className="relative h-[70vh] md:h-[80vh] pt-5 md:py-10 px-4"
+            className="relative h-[70vh] md:h-[100vh] pt-24 md:pt-28 px-4"
         >
             <div className="max-w-6xl mx-auto h-full rounded-xl overflow-hidden shadow-lg animate-fadeInUp">
                 <div className="relative h-full">

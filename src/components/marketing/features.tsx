@@ -1,5 +1,5 @@
 import React from "react";
-import { Leaf, Scale3D, SunSnow } from "lucide-react";
+import { Leaf, MessageCircleQuestion, Scale3D, SunSnow } from "lucide-react";
 import Image from "next/image";
 
 const features = [
@@ -28,6 +28,11 @@ const FeatureSection: React.FC = () => {
     return (
         <section id="keunggulan" className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
+                <p className="text-sm text-emerald-500 font-medium mb-1 flex items-center gap-2">
+                    <MessageCircleQuestion />
+                    <span>Mengapa</span>
+                </p>
+
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                     Kenapa Memilih Kami?
                 </h2>
