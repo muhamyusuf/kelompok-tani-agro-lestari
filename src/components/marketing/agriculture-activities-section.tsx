@@ -20,8 +20,8 @@ const activities = [
     {
         title: "Maintenance Tanaman",
         description:
-            "Perawatan rutin mencakup penyiraman, pengendalian hama, dan pemantauan kesehatan tanaman secara berkala untuk menjaga pertumbuhan yang stabil.",
-        image: "https://picsum.photos/id/1031/800/450",
+            "Perawatan rutin kami meliputi penyiraman, pengendalian hama, polinasi, dan pruning untuk memastikan pertumbuhan melon yang sehat dan hasil yang optimal.",
+        image: "/activities/maintenance.avif",
     },
     {
         title: "Polinasi",
@@ -33,19 +33,19 @@ const activities = [
         title: "Pruning",
         description:
             "Pemangkasan daun dan cabang yang tidak produktif membantu fokus energi tanaman, sehingga pertumbuhan dan pembentukan buah lebih maksimal.",
-        image: "https://picsum.photos/id/1051/800/450",
+        image: "/activities/pruning.jpg",
     },
     {
         title: "Penyesuaian Nutrisi",
         description:
             "Nutrisi dan pupuk cair diberikan sesuai fase pertumbuhan tanaman melon, memastikan setiap fase mendapatkan dukungan gizi yang optimal.",
-        image: "https://picsum.photos/id/1061/800/450",
+        image: "/activities/nutrisi.png",
     },
     {
         title: "Masa Panen",
         description:
             "Buah melon dipetik pada saat kematangan optimal dengan rasa manis, aroma segar, dan kualitas terbaik untuk siap didistribusikan ke konsumen.",
-        image: "https://picsum.photos/id/1071/800/450",
+        image: "/activities/panen.png",
     },
 ];
 
