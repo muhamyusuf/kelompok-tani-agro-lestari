@@ -16,11 +16,13 @@ import OrderStepsSection from "@/components/marketing/order-step-section";
 import TechGridSection from "@/components/marketing/tech-grid-section";
 import AgricultureActivitiesSection from "@/components/marketing/agriculture-activities-section";
 import Location from "@/components/marketing/location";
+import StatsCard from "@/components/marketing/stats-card";
 
 export default function Home() {
   return (
     <main className="w-full flex flex-col min-h-screen max-w-7xl mx-auto">
       <HeaderHero />
+      <StatsCard />
       <FeatureSection />
       <AboutSection />
       <ProductHighlight />

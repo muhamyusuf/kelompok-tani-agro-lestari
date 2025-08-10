@@ -7,30 +7,36 @@ import { X, ChevronLeft, ChevronRight, Package } from "lucide-react";
 const products = [
     {
         name: "Melon Intanon",
-        description: "Melon varietas unggulan dengan rasa segar dan manis khas.",
-        image: "/marketing/intanon-melon.png"
+        description: "Melon varietas unggulan dengan rasa manis dan segar, cocok untuk konsumsi harian maupun pasar.",
+        image: "/compressed/produk/intanon-melon-cut.jpg"
     },
     {
         name: "Golden Melon",
-        description: "Golden Melon premium berwarna kuning keemasan dengan daging tebal.",
-        image: "/marketing/golden-melon.png"
+        description: "Golden Melon premium berwarna kuning keemasan dengan daging tebal dan rasa yang kaya, ideal untuk penikmat rasa manis.",
+        image: "/compressed/produk/golden-melon.avif"
     },
     {
         name: "Sweet Melon",
-        description: "Melon manis alami cocok untuk semua kalangan dan cuaca tropis.",
-        image: "/marketing/sweet-melon.png"
+        description: "Melon manis alami dengan tekstur yang lembut, cocok untuk berbagai kalangan dan cuaca tropis.",
+        image: "/compressed/produk/sweet-melon.avif"
     },
     {
         name: "Bibit Melon Premium",
-        description: "Bibit melon unggul untuk budidaya greenhouse maupun lahan terbuka, dengan daya tumbuh tinggi.",
-        image: "/marketing/bibit-melon.png"
+        description: "Bibit melon unggul untuk budidaya di greenhouse dan lahan terbuka, dengan daya tumbuh tinggi dan hasil berkualitas.",
+        image: "/compressed/produk/bibit-melon.webp"
     },
     {
-        name: "Bibit Cabai Rawit",
-        description: "Bibit cabai rawit pilihan dengan pertumbuhan cepat dan tahan terhadap cuaca tropis ekstrem.",
-        image: "/marketing/bibit-cabai.png"
+        name: "Segala Bibit Cabai, Terong, dan Lainnya",
+        description: "Kami menyediakan berbagai bibit cabai (Gacos, Tanggu, Sios, Faruq), terong, selada, kembang kol, dan tomat dengan kualitas terbaik, cocok untuk berbagai jenis lahan dan iklim tropis.",
+        image: "/compressed/produk/bibit-cabai.avif"
+    },
+    {
+        name: "Bibit Custom",
+        description: "Bibit berkualitas tinggi untuk berbagai jenis tanaman, termasuk cabai, terong, dan lainnya, dengan pertumbuhan cepat dan tahan terhadap cuaca ekstrem.",
+        image: "/compressed/produk/bibit-custom.avif"
     }
 ];
+
 
 
 const ProductHighlight: React.FC = () => {
