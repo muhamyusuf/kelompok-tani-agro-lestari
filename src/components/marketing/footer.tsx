@@ -53,7 +53,7 @@ export function Footer() {
 
                 {/* Copyright */}
                 <p className="mt-6 text-center text-sm text-emerald-700 dark:text-[#8FCCB8]/90">
-                    © {new Date().getFullYear()} Melon Premium Agro Lestari. All rights reserved.
+                    © {new Date().getFullYear()} Melon Premium Agro Lestari by ITERAHERO Gen 4 & 5. All rights reserved.
                 </p>
             </div>
         </footer>

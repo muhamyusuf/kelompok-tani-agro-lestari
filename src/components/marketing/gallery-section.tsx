@@ -11,7 +11,9 @@ const images = [
     "compressed/5.avif",
     "compressed/6.avif",
     "compressed/7.avif",
-    "compressed/8.avif"
+    "compressed/8.avif",
+    "compressed/9.avif",
+    "compressed/10.avif"
 ];
 
 const GallerySection: React.FC = () => {
