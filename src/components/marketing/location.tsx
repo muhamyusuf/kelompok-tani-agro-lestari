@@ -25,6 +25,7 @@ export default function Location() {
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
+                            title="Lokasi Kelompok Tani Agro Lestari"
                         />
                     </div>
 

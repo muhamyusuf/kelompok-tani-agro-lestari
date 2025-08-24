@@ -138,16 +138,19 @@ const AgricultureActivitiesSection: React.FC = () => {
                     <button
                         onClick={prevSlide}
                         className="bg-white/20 hover:bg-white/40 rounded-full p-3 transition-colors"
+                        aria-label="Previous slide"
                     >
                         <ChevronLeft className="w-5 h-5 text-white" />
                     </button>
                     <button
                         onClick={nextSlide}
                         className="bg-white/20 hover:bg-white/40 rounded-full p-3 transition-colors"
+                        aria-label="Next slide"
                     >
                         <ChevronRight className="w-5 h-5 text-white" />
                     </button>
                 </div>
+
 
                 {/* Description */}
                 <p className="mt-6 max-w-3xl text-green-100 bg-none text-sm sm:text-base leading-relaxed">

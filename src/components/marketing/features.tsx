@@ -28,7 +28,7 @@ const FeatureSection: React.FC = () => {
     return (
         <section id="keunggulan" className="py-16 px-4">
             <div className="max-w-6xl mx-auto">
-                <p className="text-sm text-emerald-500 font-medium mb-1 flex items-center gap-2">
+                <p className="text-sm text-emerald-700 font-medium mb-1 flex items-center gap-2">
                     <MessageCircleQuestion />
                     <span>Mengapa</span>
                 </p>

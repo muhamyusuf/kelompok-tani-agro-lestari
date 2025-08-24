@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const HeaderHero: React.FC = () => {
@@ -9,7 +10,9 @@ const HeaderHero: React.FC = () => {
             <div className="max-w-6xl mx-auto h-full rounded-xl overflow-hidden shadow-lg animate-fadeInUp">
                 <div className="relative h-full">
                     {/* Background Image */}
-                    <img
+                    <Image
+                        fill
+                        quality={70}
                         src="/marketing/hero-image.png"
                         alt="Melon Premium"
                         className="absolute inset-0 w-full h-full object-cover"
