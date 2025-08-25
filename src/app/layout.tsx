@@ -70,6 +70,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="AiM3k63oSL4oJ56tbKJAr3aya_RTuLsfVoYTRqLZpTY" />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="JwukG2dzrl7rOLW+zQjT+A" async></script>
       </head>
       <body
         className={cn(
