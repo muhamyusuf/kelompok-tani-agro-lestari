@@ -63,7 +63,7 @@ export function Navbar() {
                         <Sheet>
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon">
-                                    <Menu className="h-6 w-6" />
+                                    <Menu className="h-6 w-6 text-black dark:text-white" />
                                     <span className="sr-only">Buka Menu</span>
                                 </Button>
                             </SheetTrigger>
