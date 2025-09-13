@@ -52,6 +52,7 @@ const FeatureSection: React.FC = () => {
                                 width={1080}
                                 height={1080}
                                 className="mb-4 w-full h-64 rounded-sm object-cover"
+                                loading="lazy"
                             />
 
                             <div className="mb-4">{feature.icon}</div>

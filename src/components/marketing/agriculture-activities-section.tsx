@@ -114,7 +114,7 @@ const AgricultureActivitiesSection: React.FC = () => {
                             <video
                                 key={activities[currentIndex].image}
                                 src={activities[currentIndex].image}
-
+                                aria-label={activities[currentIndex].title}
                                 autoPlay
                                 loop
                                 muted
@@ -127,6 +127,7 @@ const AgricultureActivitiesSection: React.FC = () => {
                                 alt={activities[currentIndex].title}
                                 width={800}
                                 height={450}
+                                loading="lazy"
                                 className={`w-full h-full object-cover rounded-xl shadow-lg transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
                             />
                         )}

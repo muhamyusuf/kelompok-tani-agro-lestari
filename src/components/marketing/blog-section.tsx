@@ -5,6 +5,7 @@ import { blogs } from "#site/content";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const BlogSection = () => {
     const [zoomIndex, setZoomIndex] = useState<number | null>(null);
@@ -35,10 +36,13 @@ const BlogSection = () => {
                                     setZoomIndex(idx);
                                 }}
                             >
-                                <img
+                                <Image
                                     src={post.thumbnail || "https://picsum.photos/600"}
                                     alt={post.title}
                                     className="w-full h-72 object-cover hover:scale-105 transition-transform duration-300"
+                                    loading="lazy"
+                                    width={600}
+                                    height={300}
                                 />
                             </div>
                             <div>
@@ -69,12 +73,15 @@ const BlogSection = () => {
                         >
                             <X className="w-6 h-6" />
                         </button>
-                        <img
+                        <Image
                             src={
                                 recentBlogs[zoomIndex].thumbnail || "https://picsum.photos/600"
                             }
                             alt={recentBlogs[zoomIndex].title}
                             className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-xl"
+                            loading="lazy"
+                            width={800}
+                            height={600}
                         />
                     </div>
                 )}

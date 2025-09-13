@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const testimonials = [
@@ -46,6 +47,7 @@ const TestimonialSection: React.FC = () => {
                             src={testimonials[currentIndex].image}
                             alt={testimonials[currentIndex].name}
                             className="w-full h-64 object-cover"
+                            loading="lazy"
                         />
                     </div>
                     {/* Displaying the name and message with sliding text */}

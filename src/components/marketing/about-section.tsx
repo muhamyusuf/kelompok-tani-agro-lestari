@@ -32,6 +32,7 @@ const AboutSection: React.FC = () => {
                             width={700}
                             height={700}
                             className="w-full h-full object-cover transition-transform duration-500 ease-in-out md:group-hover:scale-105"
+                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -57,6 +58,7 @@ const AboutSection: React.FC = () => {
                                     width={300}
                                     height={200}
                                     className="rounded-sm object-cover w-full h-[110px]"
+                                    loading="lazy"
                                 />
                                 <p className="text-xs text-center mt-1 text-gray-500 dark:text-gray-300">
                                     [{String(idx + 1).padStart(2, '0')}]
@@ -86,6 +88,7 @@ const AboutSection: React.FC = () => {
                         width={1000}
                         height={1000}
                         className="w-full h-auto object-contain rounded-xl"
+                        loading="lazy"
                     />
                 </Dialog.Panel>
             </Dialog>

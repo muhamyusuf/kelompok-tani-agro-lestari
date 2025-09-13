@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
   name: "Kelompok Tani Agro Lestari",
   title: "Melon Premium Lampung Timur – Agro Lestari",
   description:
-    "Temukan kemurnian dan kesegaran Melon Premium langsung dari ladang terbaik Lampung Timur. Ditanam dengan teknik ramah lingkungan oleh Kelompok Tani Agro Lestari, kami hadirkan rasa manis alami dan kualitas buah unggulan untuk Indonesia.",
+    "Rasakan kesegaran Melon Premium dari Agro Lestari, ladang terbaik di Lampung Timur. Ditanam dengan teknik ramah lingkungan, memberikan rasa manis dan kualitas terbaik melon.",
   origin: "https://www.agrolestarifarm.my.id",
   keywords: [
     "Melon Premium",

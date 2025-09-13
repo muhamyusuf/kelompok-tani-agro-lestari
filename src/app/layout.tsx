@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { siteConfig } from "@/config/site.config";
 import { cn } from "@/lib/utils";
 import RootProviders from "@/components/providers";
+import { headers } from 'next/headers'
 
 const fontSans = Geist({
   variable: "--font-geist-sans",
@@ -61,11 +62,14 @@ export const metadata: Metadata = {
 };
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers()
+  const userAgent = headersList.get('user-agent')
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>

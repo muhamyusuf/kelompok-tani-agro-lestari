@@ -16,6 +16,7 @@ const HeaderHero: React.FC = () => {
                         src="/marketing/hero-image.png"
                         alt="Melon Premium"
                         className="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
                     />
 
                     {/* Overlay Gradient */}

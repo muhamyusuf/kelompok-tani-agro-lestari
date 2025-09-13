@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const images = [
     "compressed/1.avif",
@@ -55,6 +56,9 @@ const GallerySection: React.FC = () => {
                             key={index}
                             src={src}
                             alt={`Galeri ${index + 1}`}
+                            width={400}
+                            height={300}
+                            loading="lazy"
                             className="w-full rounded-xl shadow-md hover:scale-[1.02] transition-transform cursor-pointer"
                             onClick={() => openImage(index)}
                         />
