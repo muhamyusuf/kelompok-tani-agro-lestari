@@ -41,7 +41,7 @@ export function Navbar() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-1">
+                <nav className="hidden lg:flex items-center gap-1">
                     {navLinks.map((link) => (
                         <Link
                             key={link.title}
@@ -59,7 +59,7 @@ export function Navbar() {
                     <span className="sr-only">Ganti Tema</span>
 
                     {/* Mobile Menu */}
-                    <div className="md:hidden">
+                    <div className="lg:hidden">
                         <Sheet>
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon">
