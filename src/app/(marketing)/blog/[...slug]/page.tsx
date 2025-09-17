@@ -145,7 +145,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                 {/* Post Title and Description */}
                 <div className="space-y-2 mb-6">
-                    <h1 className="scroll-m-20 text-3xl md:text-4xl font-bold tracking-tight font-heading">
+                    <h1 className="scroll-m-20 text-3xl md:text-4xl font-bold tracking-tight font-heading text-primary">
                         {blog.title}
                     </h1>
                     {blog.description && (
@@ -170,7 +170,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                         <img
                             src={blog.thumbnail}
                             alt={`Gambar ilustrasi untuk ${blog.title}`}
-                            className="w-full max-h-[500px] object-cover"
+                            className="w-full max-h-[500px] object-cover rounded-lg shadow-md"
                         />
                     </div>
                 )}
@@ -200,5 +200,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
             )}
         </main>
+
     );
 }

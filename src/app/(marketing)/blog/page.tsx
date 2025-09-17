@@ -31,10 +31,10 @@ export default function BlogListPage() {
     return (
         <div className="max-w-6xl mx-auto pt-32 pb-12 px-4 space-y-16">
             <div className="text-center">
-                <h1 className="text-4xl font-bold tracking-tight font-heading">
+                <h1 className="text-4xl font-bold tracking-tight font-heading text-black dark:text-white">
                     Wawasan Seputar Melon Premium
                 </h1>
-                <p className="text-lg text-muted-foreground mt-2">
+                <p className="text-lg text-black dark:text-white mt-2">
                     Baca berbagai artikel menarik seputar budidaya melon, manfaat kesehatannya,
                     dan cerita di balik proses panen dari kebun Agro Lestari di Lampung Timur.
                 </p>
