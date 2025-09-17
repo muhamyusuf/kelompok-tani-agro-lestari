@@ -20,15 +20,15 @@ const StatsCard = () => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-            <div className="flex flex-col items-center justify-center text-center px-4 py-8">
+            <div className="flex flex-col items-center justify-center text-center px-4 py-8 text-emerald-900 dark:text-white">
                 <span className="text-4xl">{percent}%</span>
                 <p className="opacity-90 mt-2 text-sm w-[70%]">Kepuasan dari 32 Greenhouse di Lampung Timur</p>
             </div>
-            <div className="flex flex-col items-center justify-center text-center px-4 py-8">
+            <div className="flex flex-col items-center justify-center text-center px-4 py-8 text-emerald-900 dark:text-white">
                 <span className="text-4xl">{growthRate}%</span>
                 <p className="opacity-90 mt-2 text-sm w-[70%]">Tingkat Pertumbuhan Tahunan di Sumatera</p>
             </div>
-            <div className="flex flex-col items-center justify-center text-center px-4 py-8">
+            <div className="flex flex-col items-center justify-center text-center px-4 py-8 text-emerald-900 dark:text-white">
                 <span className="text-4xl">{userCount}+</span>
                 <p className="opacity-90 mt-2 text-sm w-[70%]">Customer Mendapatkan Manfaat dari Agro Lestari</p>
             </div>
