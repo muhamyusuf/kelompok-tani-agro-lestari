@@ -46,7 +46,14 @@ export async function generateMetadata(
             description: blog.description,
             type: "article",
             url: canonical,
-            images: [`https://www.agrolestarifarm.my.id${blog.thumbnail}`, ...previousImages],
+            images: [
+                {
+                    url: blog.thumbnail ? `https://www.agrolestarifarm.my.id${blog.thumbnail}` : siteConfig.og,
+                    width: 2880,
+                    height: 1800,
+                    alt: siteConfig.name,
+                },
+            ],
         },
         twitter: {
             card: "summary_large_image",
