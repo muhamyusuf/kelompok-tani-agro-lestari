@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Dialog } from '@headlessui/react';
-import { X } from 'lucide-react';
+import { X, Quote } from 'lucide-react';
 
 const content = {
     title: 'Budidaya Melon Premium',
@@ -18,7 +18,57 @@ const AboutSection: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <section id="tentang" className="py-16 px-4">
+        <section id="tentang" className="py-16 px-4 bg-transparent">
+            {/* Visi dan Misi Organisasi */}
+            <div className="mb-12 text-center relative">
+                {/* Single Quote Section */}
+                <Quote className="absolute left-1/2 transform -translate-x-1/2 top-0 -translate-y-1/2 text-emerald-500 w-96 h-96 opacity-25" />
+                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 relative">
+                    <span>Visi</span>
+                </h2>
+                <p className="text-xl sm:text-2xl text-gray-900 dark:text-white mb-8">
+                    Menjadi kelompok tani unggulan yang mandiri, berdaya saing, dan adaptif terhadap tantangan pertanian modern berbasis keberlanjutan.
+                </p>
+
+                <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 relative">
+                    Misi
+                </h2>
+                <div className="flex flex-wrap justify-center mb-8 gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                    {/* Mission Circles */}
+                    <div className="flex flex-col items-center">
+                        <div className="bg-emerald-500 text-white p-4 sm:p-6 rounded-full shadow-md min-w-[150px] sm:min-w-[200px] min-h-[150px] sm:min-h-[200px] flex items-center justify-center">
+                            <p className="text-5xl sm:text-7xl">1</p>
+                        </div>
+                        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">Meningkatkan produktivitas pertanian dan peternakan secara berkelanjutan.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <div className="bg-emerald-500 text-white p-4 sm:p-6 rounded-full shadow-md min-w-[150px] sm:min-w-[200px] min-h-[150px] sm:min-h-[200px] flex items-center justify-center">
+                            <p className="text-5xl sm:text-7xl">2</p>
+                        </div>
+                        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">Menguatkan posisi petani dalam rantai pasok agribisnis nasional.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <div className="bg-emerald-500 text-white p-4 sm:p-6 rounded-full shadow-md min-w-[150px] sm:min-w-[200px] min-h-[150px] sm:min-h-[200px] flex items-center justify-center">
+                            <p className="text-5xl sm:text-7xl">3</p>
+                        </div>
+                        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">Memperluas akses pasar dan membangun jaringan kemitraan strategis.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <div className="bg-emerald-500 text-white p-4 sm:p-6 rounded-full shadow-md min-w-[150px] sm:min-w-[200px] min-h-[150px] sm:min-h-[200px] flex items-center justify-center">
+                            <p className="text-5xl sm:text-7xl">4</p>
+                        </div>
+                        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">Mendorong regenerasi petani muda melalui pelatihan dan pemanfaatan teknologi.</p>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <div className="bg-emerald-500 text-white p-4 sm:p-6 rounded-full shadow-md min-w-[150px] sm:min-w-[200px] min-h-[150px] sm:min-h-[200px] flex items-center justify-center">
+                            <p className="text-5xl sm:text-7xl">5</p>
+                        </div>
+                        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">Mengembangkan tata kelola kelompok berbasis prinsip transparansi, partisipasi, dan akuntabilitas.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* About Section */}
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-10 overflow-hidden">
                 {/* Gambar besar kiri full height dengan zoom effect */}
                 <div className="md:w-1/2 w-full h-auto md:h-auto flex">
