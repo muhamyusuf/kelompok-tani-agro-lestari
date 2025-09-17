@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { blogs } from "#site/content";
-
 import type { Metadata, ResolvingMetadata } from "next";
 import Balancer from "react-wrap-balancer";
 import { siteConfig } from "@/config/site.config";
@@ -15,17 +14,15 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
+// Function to get blog by slug
 function getBlogBySlug(slugArr: string[]) {
     const slug = slugArr.join("/") || "";
     return blogs.find((post) => post.slugAsParams === slug) ?? null;
 }
 
+// Metadata generation for SEO
 export async function generateMetadata(
-    {
-        params,
-    }: {
-        params: Promise<{ slug: string[] }>;
-    },
+    { params }: { params: Promise<{ slug: string[] }> },
     parent: ResolvingMetadata
 ): Promise<Metadata> {
     const { slug } = await params;
@@ -49,7 +46,7 @@ export async function generateMetadata(
             description: blog.description,
             type: "article",
             url: canonical,
-            images: [siteConfig.og, ...previousImages],
+            images: [`https://www.agrolestarifarm.my.id${blog.thumbnail}`, ...previousImages],
         },
         twitter: {
             card: "summary_large_image",
@@ -65,10 +62,11 @@ export async function generateMetadata(
             index: true,
             follow: true,
         },
-        // metadataBase: new URL(siteConfig.url),
+        metadataBase: new URL(`https://www.agrolestarifarm.my.id${blog.slug}`),
     };
 }
 
+// Generate static params for dynamic routing
 export async function generateStaticParams(): Promise<{ slug: string[] }[]> {
     return blogs.map((blog) => ({
         slug: blog.slugAsParams.split("/"),
@@ -100,7 +98,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             name: blog.author || siteConfig.creator.name,
         },
         datePublished: publishedDate,
-        image: blog.thumbnail ? absoluteUrl(blog.thumbnail) : siteConfig.og,
+        image: blog.thumbnail ? `https://www.agrolestarifarm.my.id${blog.thumbnail}` : siteConfig.og,
         mainEntityOfPage: {
             "@type": "WebPage",
             "@id": canonical,
@@ -115,6 +113,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </script>
 
             <div className="w-full mx-auto min-w-0">
+                {/* Breadcrumb */}
                 <Breadcrumb className="mb-4">
                     <BreadcrumbList>
                         {blog.slug.split("/").map((part, index, array) => (
@@ -137,6 +136,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     </BreadcrumbList>
                 </Breadcrumb>
 
+                {/* Post Title and Description */}
                 <div className="space-y-2 mb-6">
                     <h1 className="scroll-m-20 text-3xl md:text-4xl font-bold tracking-tight font-heading">
                         {blog.title}
@@ -157,6 +157,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     </p>
                 </div>
 
+                {/* Thumbnail Image */}
                 {blog.thumbnail && (
                     <div className="mb-8 overflow-hidden rounded-md">
                         <img
@@ -167,10 +168,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     </div>
                 )}
 
+                {/* Blog Content */}
                 <div className="prose dark:prose-invert max-w-none pb-12">
                     <MDXContentRenderer code={blog.body} />
                 </div>
 
+                {/* Back to Blog Button */}
                 <div className="flex justify-center w-full xl:w-auto">
                     <a
                         href="/blog"
@@ -181,6 +184,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
             </div>
 
+            {/* Table of Contents (Toc) */}
             {tocContent.length > 0 && (
                 <div className="hidden text-sm xl:block">
                     <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] pt-4">
