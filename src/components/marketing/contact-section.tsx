@@ -82,6 +82,7 @@ const ContactSection: React.FC = () => {
                             <Input
                                 id="name"
                                 placeholder="Nama Anda"
+                                required
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                             />
@@ -93,6 +94,7 @@ const ContactSection: React.FC = () => {
                                 placeholder="Tulis pesan Anda di sini..."
                                 rows={5}
                                 value={message}
+                                required
                                 onChange={(e) => setMessage(e.target.value)}
                             />
                         </div>
