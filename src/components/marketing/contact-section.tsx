@@ -14,6 +14,7 @@ const ContactSection: React.FC = () => {
     const [question, setQuestion] = useState("");
     const [answer, setAnswer] = useState("");
     const [correctAnswer, setCorrectAnswer] = useState<number>(0);
+    const [showWarning, setShowWarning] = useState(false); // State for the warning popup
 
     // Generate new challenge
     const generateChallenge = () => {
@@ -37,6 +38,11 @@ const ContactSection: React.FC = () => {
     };
 
     const handleSendWhatsApp = () => {
+        if (!name || !message) {
+            // Show warning popup if form is not filled
+            setShowWarning(true);
+            return;
+        }
         generateChallenge();
     };
 
@@ -100,7 +106,6 @@ const ContactSection: React.FC = () => {
                         <Button
                             onClick={handleSendWhatsApp}
                             className="w-full bg-[#009963] hover:bg-[#009963]/90 dark:text-white"
-                            disabled={!name || !message}  // Disable button if name or message is empty
                         >
                             Kirim Pesan via WhatsApp
                         </Button>
@@ -137,6 +142,22 @@ const ContactSection: React.FC = () => {
                                 Batal
                             </Button>
                         </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Warning Popup */}
+            {showWarning && (
+                <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/50">
+                    <div className="bg-red-500 text-white p-6 rounded-lg shadow-xl max-w-sm w-full text-center">
+                        <h2 className="text-lg font-semibold">Formulir belum lengkap!</h2>
+                        <p className="text-sm">Nama dan pesan harus diisi sebelum mengirim pesan via WhatsApp.</p>
+                        <Button
+                            onClick={() => setShowWarning(false)}
+                            className="bg-white text-gray-900 mt-4"
+                        >
+                            Tutup
+                        </Button>
                     </div>
                 </div>
             )}
