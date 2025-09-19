@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const ContactSection: React.FC = () => {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
-
     const [showModal, setShowModal] = useState(false);
     const [question, setQuestion] = useState("");
     const [answer, setAnswer] = useState("");
@@ -101,6 +100,7 @@ const ContactSection: React.FC = () => {
                         <Button
                             onClick={handleSendWhatsApp}
                             className="w-full bg-[#009963] hover:bg-[#009963]/90 dark:text-white"
+                            disabled={!name || !message}  // Disable button if name or message is empty
                         >
                             Kirim Pesan via WhatsApp
                         </Button>
