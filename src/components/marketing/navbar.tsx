@@ -11,8 +11,11 @@ import { Menu } from "lucide-react";
 import ThemeToggler from "@/components/theme/toggler";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 export function Navbar() {
+    const [isOpen, setIsOpen] = useState(false); // State to track Sheet's open/close status
+
     const navLinks = [
         { title: "Beranda", href: "/#beranda" },
         { title: "Tentang Kami", href: "/#tentang" },
@@ -21,6 +24,10 @@ export function Navbar() {
         { title: "Testimonial", href: "/#testimonial" },
         { title: "Blog/Artikel", href: "/blog" },
     ];
+
+    const handleLinkClick = () => {
+        setIsOpen(false); // Close the sheet when a link is clicked
+    };
 
     return (
         <header className="fixed top-4 left-1/2 z-50 -translate-x-1/2 w-[92%] md:w-[85%]">
@@ -60,7 +67,7 @@ export function Navbar() {
 
                     {/* Mobile Menu */}
                     <div className="lg:hidden">
-                        <Sheet>
+                        <Sheet open={isOpen} onOpenChange={setIsOpen}>
                             <SheetTrigger asChild>
                                 <Button variant="ghost" size="icon">
                                     <Menu className="h-6 w-6 text-black dark:text-white" />
@@ -89,6 +96,7 @@ export function Navbar() {
                                             key={link.title}
                                             href={link.href}
                                             className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+                                            onClick={handleLinkClick} // Close sheet when link is clicked
                                         >
                                             {link.title}
                                         </Link>
